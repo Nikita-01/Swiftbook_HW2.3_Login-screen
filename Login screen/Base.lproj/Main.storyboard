@@ -22,12 +22,18 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hN3-an-7ck">
                                         <rect key="frame" x="0.0" y="0.0" width="294" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="4dZ-HA-mt3"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KRS-Kv-iJD">
                                         <rect key="frame" x="0.0" y="74" width="294" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Qlb-s0-MMG"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -78,6 +84,7 @@
                             <constraint firstItem="VIf-36-WvI" firstAttribute="top" secondItem="P9f-Aw-n23" secondAttribute="bottom" constant="40" id="QCH-CI-hmi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4ZR-eS-6vw" secondAttribute="trailing" constant="20" id="SW5-Jp-Idd"/>
                             <constraint firstItem="VIf-36-WvI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.241546" id="TIt-qc-7Y2"/>
+                            <constraint firstItem="4ZR-eS-6vw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="W5R-YW-oqi" secondAttribute="trailing" constant="8" symbolic="YES" id="aZb-5k-d3K"/>
                             <constraint firstItem="W5R-YW-oqi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="c5Q-En-xCx"/>
                             <constraint firstItem="4ZR-eS-6vw" firstAttribute="top" secondItem="VIf-36-WvI" secondAttribute="bottom" constant="40" id="p42-Lq-dD7"/>
                             <constraint firstItem="W5R-YW-oqi" firstAttribute="top" secondItem="VIf-36-WvI" secondAttribute="bottom" constant="40" id="ts6-vl-B4G"/>
@@ -114,6 +121,7 @@
                                 <state key="normal" title="Log Out"/>
                                 <connections>
                                     <action selector="logOutButtomPressed" destination="ynn-mj-dre" eventType="touchUpInside" id="JFb-Z3-InU"/>
+                                    <segue destination="Dd1-dq-5je" kind="unwind" unwindAction="unwindFor:" id="sEN-Zz-pfI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -134,6 +142,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mWp-T6-iMB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Dd1-dq-5je" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3471.0144927536235" y="83.705357142857139"/>
         </scene>

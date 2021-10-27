@@ -12,6 +12,7 @@ class GreatingViewController: UIViewController {
     @IBOutlet var greetingLabel: UILabel!
     
     var userName: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         greetingLabel.text = "Welcom, " + userName + "!"
